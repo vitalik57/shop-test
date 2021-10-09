@@ -1,5 +1,7 @@
 import axios from "axios";
 import React, { Component } from "react";
+import ContactList from "./ContactList";
+import Filter from "./Filter";
 
 class Katalog extends Component {
   state = {
@@ -37,10 +39,17 @@ class Katalog extends Component {
     }
   };
   render() {
-    // const { products } = this.state;
+    const { products } = this.state;
     return (
       <>
-        Filtered : <input type="text" name="filter" onChange={this.handleChange} />
+        {products.length > 1 && <Filter onChange={this.handleChange} />}
+        {products.length ? (
+          <ContactList products={this.getVisibleContacts()} onRemove={this.removeContact} />
+        ) : (
+          <p>There are no contacts here</p>
+        )}
+
+        {/* Filtered : <input type="text" name="filter" onChange={this.handleChange} />
         {this.state.products.map(product => (
           <div key={product.id}>
             <h2 key={product.id}>{product.name}</h2>
@@ -52,7 +61,7 @@ class Katalog extends Component {
               add product
             </button>
           </div>
-        ))}
+        ))} */}
       </>
     );
   }
