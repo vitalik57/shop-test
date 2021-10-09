@@ -2,11 +2,13 @@ import axios from "axios";
 import React, { Component } from "react";
 import ContactList from "./ContactList";
 import Filter from "./Filter";
-
+// const products.length
 class Katalog extends Component {
   state = {
     products: [],
-    filter: ""
+    filter: "",
+    quantityOfGoods: 10,
+    pages: 0
   };
 
   componentDidMount() {
@@ -38,13 +40,30 @@ class Katalog extends Component {
       return products.filter(products => products.name.toLowerCase().includes(filter.toLowerCase()));
     }
   };
+  pageClick = () => {
+    this.setState(prevState => ({
+      pages: prevState.pages + 1
+    }));
+  };
   render() {
-    const { products } = this.state;
+    const { products, quantityOfGoods, pages } = this.state;
+    console.log(products);
     return (
       <>
+        <input
+          placeholder="quantity of goods on page"
+          type="number"
+          value={quantityOfGoods}
+          name="quantityOfGoods"
+          onChange={this.handleChange}
+        />
+        <button type="button" onClick={this.pageClick}>
+          new page
+        </button>
+
         {products.length > 1 && <Filter onChange={this.handleChange} />}
         {products.length ? (
-          <ContactList products={this.getVisibleContacts()} onRemove={this.removeContact} />
+          <ContactList products={this.getVisibleContacts()} pages={pages} quantityOfGoods={quantityOfGoods} />
         ) : (
           <p>There are no contacts here</p>
         )}
