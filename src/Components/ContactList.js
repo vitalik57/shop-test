@@ -45,7 +45,7 @@ import React from "react";
 // }
 
 // export default ContactList;
-const ContactList = ({ products, quantityOfGoods, pages }) => {
+const ContactList = ({ products, quantityOfGoods, pages, addToCart }) => {
   // const proto = products.length;
   // if (products.length > 10) {
   //   products.length = 10;
@@ -63,8 +63,11 @@ const ContactList = ({ products, quantityOfGoods, pages }) => {
     },
     [[]]
   );
-  // const response = [...res];
-  console.log("pryd", pages);
+  // const addToCart = prouct => {
+  //   console.log(prouct);
+  // };
+  // // const response = [...res];
+  // console.log("pryd", pages);
 
   return (
     <>
@@ -76,7 +79,14 @@ const ContactList = ({ products, quantityOfGoods, pages }) => {
           <p>{product.description}</p>
           <p>price: {product.price}$</p>
           <p>rating: {product.rating || 0}</p>
-          <button type="button">add product</button>
+          <button
+            onClick={() => {
+              addToCart(product);
+            }}
+            type="button"
+          >
+            add product
+          </button>
         </div>
       ))}
     </>

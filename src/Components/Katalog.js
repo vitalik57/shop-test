@@ -45,11 +45,15 @@ class Katalog extends Component {
       pages: prevState.pages + 1
     }));
   };
+  addToCart(product) {
+    axios.post("https://project-8f663-default-rtdb.firebaseio.com/products.json", product);
+  }
   render() {
     const { products, quantityOfGoods, pages } = this.state;
-    console.log(products);
+
     return (
       <>
+        {/* <button onClick={this.addTo}>try heerr</button> */}
         <input
           placeholder="quantity of goods on page"
           type="number"
@@ -63,7 +67,12 @@ class Katalog extends Component {
 
         {products.length > 1 && <Filter onChange={this.handleChange} />}
         {products.length ? (
-          <ContactList products={this.getVisibleContacts()} pages={pages} quantityOfGoods={quantityOfGoods} />
+          <ContactList
+            products={this.getVisibleContacts()}
+            pages={pages}
+            addToCart={this.addToCart}
+            quantityOfGoods={quantityOfGoods}
+          />
         ) : (
           <p>There are no contacts here</p>
         )}
