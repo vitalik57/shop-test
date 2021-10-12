@@ -63,11 +63,14 @@ const ContactList = ({ products, quantityOfGoods, pages, addToCart }) => {
     },
     [[]]
   );
+  if (pages >= res.length) {
+    pages = 0;
+  }
   // const addToCart = prouct => {
   //   console.log(prouct);
   // };
   // // const response = [...res];
-  // console.log("pryd", pages);
+  console.log("pryd", res.length);
 
   return (
     <>

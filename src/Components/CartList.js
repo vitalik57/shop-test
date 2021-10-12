@@ -55,18 +55,19 @@ class CartList extends Component {
   //     this.setState({ phones });
   //   }
   // };
-  // removeContact = id => {
-  //   const { products } = this.state;
-  //   const updated = products.filter(product => product.id !== id);
-  //   this.setState({
-  //     products: [...updated]
-  //   });
-  // };
-  delateProduct(id) {
+  removeContact = id => {
+    const { products } = this.state;
+    const updated = products.filter(product => product.id !== id);
+    this.setState({
+      products: [...updated]
+    });
     axios.delete(`http://localhost:3000/products/${id}`);
-    console.log("please");
-    // this.removeContact(id);
-  }
+  };
+  // delateProduct(id) {
+  //   axios.delete(`http://localhost:3000/products/${id}`);
+  //   console.log("please");
+  //   // this.removeContact(id);
+  // }
 
   render() {
     return (
@@ -75,7 +76,7 @@ class CartList extends Component {
         <button type="button" onClick={this.getProducts}>
           delate
         </button>
-        <CartListItem delateProduct={this.delateProduct} products={this.state.products} />
+        <CartListItem delateProduct={this.removeContact} products={this.state.products} />
       </>
     );
   }
