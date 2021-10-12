@@ -64,3 +64,8 @@
       color: #819ff5;
     /* text-transform: uppercase; */
   }
+  .clickPage{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }

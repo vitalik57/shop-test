@@ -14,7 +14,7 @@ function App() {
         </li>
         <li>
           <NavLink className={styled.header_link} to="/carts">
-            CartList
+            Basket
           </NavLink>
         </li>
       </header>{" "}

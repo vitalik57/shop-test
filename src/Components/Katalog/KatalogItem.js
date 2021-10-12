@@ -18,10 +18,7 @@ const ContactList = ({ products, quantityOfGoods, pages, addToCart, newPage, pag
     },
     [[]]
   );
-  if ((pages = -1)) {
-    pages = 0;
-    alert("It was a last page ");
-  }
+
   if (pages >= res.length) {
     pages = 0;
     alert("It was a last page ");
@@ -30,43 +27,44 @@ const ContactList = ({ products, quantityOfGoods, pages, addToCart, newPage, pag
 
   return (
     <>
-      <>
-        {" "}
-        <div>
-          {res[pages].map(product => (
-            <div className={styled.content} key={product.id}>
-              <h3 className={styled.listItemTitle} key={product.id}>
-                {product.name}
-              </h3>
-              <div className={styled.imageWrapper}>
-                {" "}
-                <img className={styled.listItemImage} src={product.image_link} alt={product.name} />
-              </div>
-
-              <p className={styled.description}>{product.description}</p>
-              <div className={styled.number}>
-                <p>{product.price}$</p>
-                <p>rating: {product.rating || 0}</p>
-              </div>
-              <button
-                className={styled.katalog_button}
-                onClick={() => {
-                  addToCart(product);
-                }}
-                type="button"
-              >
-                add product
-              </button>
+      {" "}
+      <div>
+        {res[pages].map(product => (
+          <div className={styled.content} key={product.id}>
+            <h3 className={styled.listItemTitle} key={product.id}>
+              {product.name}
+            </h3>
+            <div className={styled.imageWrapper}>
+              {" "}
+              <img className={styled.listItemImage} src={product.image_link} alt={product.name} />
             </div>
-          ))}
-        </div>
-        <button type="button" onClick={pageClickMinus}>
+
+            <p className={styled.description}>{product.description}</p>
+            <div className={styled.number}>
+              <p>{product.price}$</p>
+              <p>rating: {product.rating || 0}</p>
+            </div>
+            <button
+              className={styled.katalog_button}
+              onClick={() => {
+                addToCart(product);
+              }}
+              type="button"
+            >
+              add product
+            </button>
+          </div>
+        ))}
+      </div>
+      <div className={styled.clickPage}>
+        {" "}
+        <button className={styled.katalog_button} type="button" onClick={pageClickMinus}>
           Prev page
         </button>
-        <button type="button" onClick={newPage}>
+        <button className={styled.katalog_button} type="button" onClick={newPage}>
           Next page
         </button>
-      </>
+      </div>
     </>
   );
 };
