@@ -72,7 +72,6 @@ class CartList extends Component {
   render() {
     return (
       <>
-        Rjhpbyf
         <button type="button" onClick={this.getProducts}>
           delate
         </button>

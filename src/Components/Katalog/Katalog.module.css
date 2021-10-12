@@ -1,0 +1,66 @@
+.katalog_input{
+    border: 1px solid #819ff5;
+    height: 30px;
+    border-radius: 14px;
+    padding-left: 10px;
+    margin: 5px 0;
+    font-size: 14px;
+    outline: none;
+}
+.filtering_items{
+    text-align: center;
+        display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 10px 0 10px;
+}
+.katalog_button{
+    background-color: #819ff5;
+    height: 30px;
+    padding: 0 10px;
+    border: none;
+    border-radius: 14px;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+ .content {
+    border-radius: 14px;
+    border: 1px solid #a8a8a8;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .imageWrapper {
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+ .listItemImage {
+    height: 100%;
+  }
+    .listItemTitle {
+        color: #0f0f63;
+
+    font-size: 16px;
+    text-align: center;
+  }
+  .description{
+      color: #475069;
+      text-align: left;
+  }
+  .number{
+        font-size: 22px;
+    display: flex;
+    justify-content: space-between;
+    color: #0c2b7f;
+  }
+  .input_name{
+      color: #819ff5;
+    /* text-transform: uppercase; */
+  }

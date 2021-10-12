@@ -1,23 +1,29 @@
 import { NavLink } from "react-router-dom";
-import Katalog from "./Components/Katalog";
+import Katalog from "./Components/Katalog/Katalog";
 import { Route, Switch } from "react-router-dom";
 import CartList from "./Components/CartList";
-
+import styled from "./App.module.css";
 function App() {
   return (
     <>
-      <ul>
+      <header className={styled.main_header}>
         <li>
-          <NavLink to="/">Katalog</NavLink>
+          <NavLink className={styled.header_link} to="/">
+            Katalog
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/carts">CartList</NavLink>
+          <NavLink className={styled.header_link} to="/carts">
+            CartList
+          </NavLink>
         </li>
-      </ul>{" "}
-      <Switch>
-        <Route exact path="/" component={Katalog} />
-        <Route exact path="/carts" component={CartList} />
-      </Switch>
+      </header>{" "}
+      <div className={styled.container}>
+        <Switch>
+          <Route exact path="/" component={Katalog} />
+          <Route exact path="/carts" component={CartList} />
+        </Switch>
+      </div>
     </>
   );
 }

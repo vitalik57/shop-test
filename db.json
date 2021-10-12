@@ -18,27 +18,6 @@
   },
   "products": [
     {
-      "id": 458,
-      "brand": "covergirl",
-      "name": "CoverGirl Clean Glow Blush ",
-      "price": "8.99",
-      "price_sign": null,
-      "currency": null,
-      "image_link": "https://d3t32hsnjxo7q6.cloudfront.net/i/bb0b0c2057205b8e39823c5c7fc6af45_ra,w158,h184_pa,w158,h184.jpeg",
-      "product_link": "https://well.ca/products/covergirl-clean-glow-blush_78621.html",
-      "website_link": "https://well.ca",
-      "description": "Complete your Clean® look with a flush of lightweight, blendable color. \nThis versatile 3-in-1 multi-shade compact lets you customize your color \nto create a radiant effect. Use just one color or all three!Features: 3-in-1 multi-shade compactLightweight, blendable flush of colorClean and natural lookHow to Apply:  Begin with the contour, or darkest, shade in your palette and apply to the hollow space below your cheekbones.\nApply the medium shade to the apples of your cheeks and sweep upwards toward the hairline.\nFor a youthful glow, highlight the tops of your cheeks with the lightest shade.\n                            ",
-      "rating": 5,
-      "category": "powder",
-      "product_type": "blush",
-      "tag_list": [],
-      "created_at": "2016-10-01T18:35:15.008Z",
-      "updated_at": "2017-12-23T21:08:40.969Z",
-      "product_api_url": "http://makeup-api.herokuapp.com/api/v1/products/458.json",
-      "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/458/original/data?1514063320",
-      "product_colors": []
-    },
-    {
       "id": 443,
       "brand": "covergirl",
       "name": "CoverGirl Instant Cheekbones Contouring Blush",
@@ -57,6 +36,53 @@
       "updated_at": "2017-12-23T21:08:45.693Z",
       "product_api_url": "http://makeup-api.herokuapp.com/api/v1/products/443.json",
       "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/443/original/data?1514063325",
+      "product_colors": []
+    },
+    {
+      "id": 486,
+      "brand": "covergirl",
+      "name": "CoverGirl Clean Glow Bronzer",
+      "price": "8.99",
+      "price_sign": null,
+      "currency": null,
+      "image_link": "https://d3t32hsnjxo7q6.cloudfront.net/i/4e90929a9c24a51c3db3988b205f3b43_ra,w158,h184_pa,w158,h184.jpeg",
+      "product_link": "https://well.ca/products/covergirl-clean-glow-bronzer_78622.html",
+      "website_link": "https://well.ca",
+      "description": "Flaunt the coveted beach-bronze glow in one simple step. This versatile \n3-in-1 multi-shade compact lets you customize your color to create a \nradiant effect. Use just one color or all three!Features: Beautiful bronze glow in just one stepBlendable, multi-shade compactClean and natural lookHow to Apply: Dip powder brush in bronzer and tap off any excess.\nSweep bronzer on your cheeks and temples.\nUsing a lighter touch, sweep bronzer where the sun naturally hits your face, including your nose, chin, and forehead.\n                            ",
+      "rating": 5,
+      "category": null,
+      "product_type": "bronzer",
+      "tag_list": [],
+      "created_at": "2016-10-01T18:36:01.504Z",
+      "updated_at": "2017-12-23T21:08:49.712Z",
+      "product_api_url": "http://makeup-api.herokuapp.com/api/v1/products/486.json",
+      "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/486/original/data?1514063329",
+      "product_colors": [
+        {
+          "hex_value": "#A9745E",
+          "colour_name": null
+        }
+      ]
+    },
+    {
+      "id": 473,
+      "brand": "covergirl",
+      "name": "CoverGirl truBLEND Blush in Light Rose",
+      "price": "13.99",
+      "price_sign": null,
+      "currency": null,
+      "image_link": "https://d3t32hsnjxo7q6.cloudfront.net/i/0b8787d62ced45700c0693b869645542_ra,w158,h184_pa,w158,h184.png",
+      "product_link": "https://well.ca/products/covergirl-trublend-blush-in-light_112758.html",
+      "website_link": "https://well.ca",
+      "description": "Never stop blushing with CoverGirl New truBLEND blush! Features:New marbled baked formulaUltra-blendable and delivers a beautiful, multi-toned result Designed to fit light, medium and deep skin tones alikeHow to Apply: Step 1: Lightly dip brush into blush, then tap or blow off excess powder. Step 2: Next, sweep the blush over and under your cheekbone to create a beautiful, rosy looking flush. ",
+      "rating": null,
+      "category": "powder",
+      "product_type": "blush",
+      "tag_list": [],
+      "created_at": "2016-10-01T18:35:34.299Z",
+      "updated_at": "2017-12-23T21:08:47.473Z",
+      "product_api_url": "http://makeup-api.herokuapp.com/api/v1/products/473.json",
+      "api_featured_image": "//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/473/original/open-uri20171223-4-11ptefh?1514063327",
       "product_colors": []
     }
   ]
