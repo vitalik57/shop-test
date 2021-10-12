@@ -1,5 +1,6 @@
 import React from "react";
 const CartListItem = ({ products, delateProduct }) => {
+  const autProduct = () => {};
   return (
     <>
       Купити подукт
@@ -10,9 +11,10 @@ const CartListItem = ({ products, delateProduct }) => {
           <p>{product.description}</p>
           <p>price: {product.price}$</p>
           <p>rating: {product.rating || 0}</p>
-          <button type="button" onClick={delateProduct}>
+          <button type="button" onClick={() => delateProduct(product.id)}>
             deleta product
           </button>
+          <button type="button">delete firebase</button>
         </div>
       ))}
     </>

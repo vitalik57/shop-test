@@ -45,9 +45,9 @@ class Katalog extends Component {
       pages: prevState.pages + 1
     }));
   };
-  addToCart(product) {
-    axios.post("https://project-8f663-default-rtdb.firebaseio.com/products.json", product);
-  }
+  addToCart = product => {
+    axios.post("http://localhost:3000/products", product);
+  };
   render() {
     const { products, quantityOfGoods, pages } = this.state;
 
